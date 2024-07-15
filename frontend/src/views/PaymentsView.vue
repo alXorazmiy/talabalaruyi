@@ -57,10 +57,12 @@
     import axios from "axios";
     import { onMounted, ref } from "vue";
     import { useWindowSize } from 'vue-window-size'
+    import {useInfoStore} from '../stores/infos'
     import {useControllerStore} from '../stores/controller'
 
 
     const controllerStore = useControllerStore()
+    const infoStore = useInfoStore()
 
     const searchValue = ref('')
     const payment_if = ref(false)
@@ -68,6 +70,8 @@
     const select_student = ref('')
     const select_summa = ref('')
     let headers = []
+
+
 
   
 
@@ -96,6 +100,15 @@
         }
         axios.post('payments/', request)
             .then((data)=>{
+                const timestamp = Date.now()
+
+                infoStore.info_if = true
+                let error = {
+                    id : timestamp,
+                    type: "success",
+                    text: `${(new Intl.NumberFormat('ru-RU').format(select_summa.value))} to'landi`
+                }
+                infoStore.info_list.push(error)
                 controllerStore.payments = data.data.reverse()
                 payment_if.value = false
             })

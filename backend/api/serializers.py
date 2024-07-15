@@ -31,6 +31,7 @@ class StudentSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class AllStudentSerializer(serializers.ModelSerializer):
+    faculty = FacultySerializer()
     class Meta:
         model = Student 
         fields = "__all__"

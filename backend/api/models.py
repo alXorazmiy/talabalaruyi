@@ -37,6 +37,9 @@ class Student(models.Model):
     course = models.SmallIntegerField()
     in_time = models.DateTimeField(auto_now_add=False)
     out_time = models.DateTimeField(blank=True, null= True)
+    floor = models.SmallIntegerField()
+    room = models.SmallIntegerField()
+    bed = models.SmallIntegerField()
     is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:

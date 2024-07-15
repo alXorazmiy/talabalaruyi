@@ -4,6 +4,7 @@ import './assets/css/home.css'
 import './assets/css/modal.css'
 import './assets/css/sidebar.css'
 import './assets/css/table.css'
+import './assets/css/info.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'vue3-easy-data-table/dist/style.css';

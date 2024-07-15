@@ -12,6 +12,9 @@
         <div class="menu" >
             <i class="fa-solid fa-bars" @click="sidebar_open(true)"></i>
         </div>
+        <div class="info-container">
+            <Info />
+        </div>
         <div class="page-container" @click="sidebar_open(false)">
             <RouterView />
         </div>
@@ -25,6 +28,7 @@
     import { RouterLink, RouterView } from 'vue-router'
     import Loader from './components/loader.vue'
     import Sidebar from './components/sidebar.vue'
+    import Info from './components/info.vue'
     import {useControllerStore} from './stores/controller'
 
     const controllerStore = useControllerStore()

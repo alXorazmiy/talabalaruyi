@@ -8,7 +8,9 @@
     padding: 20px;
     box-shadow: var(--box-shadow);
 }
-
+.table p {
+    margin: 0;
+}
 .table .buttons {
     display: flex;
     justify-content: end;
@@ -31,6 +33,7 @@
 .table .name {
     color: var(--color-success);
     font-weight: 600;
+    margin: 0;
 }
 .table .payment span {
     color: var(--color-danger);

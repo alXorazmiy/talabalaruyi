@@ -33,12 +33,19 @@
 }
 
 .page-container {
-    margin-left: 200px;
+    margin-left: 180px;
     right: 20px;
     height: 100vh;
     top: 0;
 }
 
+
+.info-container {
+    position: fixed;
+    z-index: 8;
+    right: 20px;
+    top: 20px;
+}
 .menu {
     position: absolute;
     top: 20px;
